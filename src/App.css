@@ -1,5 +1,57 @@
-.App {
-  text-align: center;
+nav {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-items: center;
+  align-content: center;
+}
+
+nav ul li {
+  display: flex;
+  gap: 1em;
+  list-style: none;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  grid-template-rows: repeat(6, auto);
+  gap: 1em;
+}
+
+.banner {
+  background-color: #495E57;
+  grid-area: 1 / 1 / 5 / 5;
+}
+
+.headline {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.subhead {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.headertext {
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+.reserve {
+  grid-area: 4 / 2 / 5 / 3;
+}
+
+button {
+  background-color: #F4CE14;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+.crop {
+  grid-area: 1 / 3 / 7 / 4;
+  height: 330px;
+  overflow: hidden;
+  border-radius: 5%;
 }
 
 .App-logo {
