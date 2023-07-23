@@ -5,6 +5,7 @@ function Main() {
     return(
         <main>
             <section className="header">
+                <div className="bannerBackground"></div>
                 <div className="banner">
                     <h1 className="headline">Little Lemon</h1>
                     <h2 className="subhead">Chicago</h2>

@@ -28,13 +28,12 @@ export default function Promotions(){
     return(
         <section className="promotion">
             <h1>This weeks specials!</h1>
-                <button>Online Menu</button>
+                <button className="menu">Online Menu</button>
             <article className="dishCard">
                 {dishes.map((dish) => (
-                    <div key={dish.title}>
-                        <img src={dish.getImageSrc()} alt="" width="300px"/>
-                        <p>{dish.title}</p>
-                        <p>{dish.price}</p>
+                    <div key={dish.title} style={{backgroundColor: "#EDEFEE"}}>
+                        <img src={dish.getImageSrc()} alt="food" width="220px" style={{ height:"200px", objectFit: "cover"}}/>
+                        <p>{dish.title} {dish.price}</p>
                         <p>{dish.description}</p>
                     </div>
                 ))}
