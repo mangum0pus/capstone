@@ -1,22 +1,28 @@
+import { Link, useResolvedPath, useMatch } from 'react-router-dom';
 import '../App.css';
 import logo from "../images/logo.png";
 
-function Nav() {
+export default function Nav() {
     return(
-        <nav>
-            <img className="logo" src={logo} alt="little lemon logo" width="200px"/>
-            <ul>
-                <li>
-                    <a href="./">Home</a>
-                    <a href="/About">About</a>
-                    <a href="/About">Menu</a>
-                    <a href="/About">Reservations</a>
-                    <a href="/About">Order Online</a>
-                    <a href="/About">Login</a>
-                </li>
-            </ul>
-        </nav>
+            <nav>
+                <img className="logo" src={logo} alt="little lemon logo" width="200px"/>
+                <ul>
+                    <CustomLink to="/">Home</CustomLink>
+                    <CustomLink to="/reserve">Reserve Table</CustomLink>
+                    <CustomLink to="/about">About</CustomLink>
+                </ul>
+            </nav>
     )
 }
 
-export default Nav;
+function CustomLink({ to, children, ...props}) {
+    const resolvedPath = useResolvedPath(to)
+    const isActive = useMatch({path: resolvedPath.pathname, end: true})
+    return(
+        <li className={isActive ? "active" : ''}>
+            <Link to={to} {...props}>
+                {children}
+            </Link>
+        </li>
+    )
+}
