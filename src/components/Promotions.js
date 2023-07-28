@@ -1,4 +1,5 @@
 import '../App.css';
+import FoodCard from './FoodCard'
 
 const dishes = [
     {
@@ -27,15 +28,19 @@ const dishes = [
 export default function Promotions(){
     return(
         <section className="promotion">
-            <h1>This weeks specials!</h1>
+            <div className="headerContainer">
+                <h1>This week's specials!</h1>
                 <button className="menu">Online Menu</button>
-            <article className="dishCard">
+            </div>
+            <article className="cardContainer">
                 {dishes.map((dish) => (
-                    <div key={dish.title} style={{backgroundColor: "#EDEFEE"}}>
-                        <img src={dish.getImageSrc()} alt="food" width="220px" style={{ height:"200px", objectFit: "cover"}}/>
-                        <p>{dish.title} {dish.price}</p>
-                        <p>{dish.description}</p>
-                    </div>
+                    <FoodCard
+                        key={dish.title}
+                        title={dish.title}
+                        description={dish.description}
+                        image={dish.getImageSrc()}
+                        price={dish.price}
+                    />
                 ))}
             </article>
         </section>

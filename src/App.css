@@ -1,67 +1,187 @@
-nav {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  justify-items: center;
-  align-content: center;
-  margin-bottom: 1em;
+/* General text styling */
+h1 {
+  font-family: "markazi text";
+  font-size: 64pt;
 }
 
-nav ul li {
+h1.headline {
+  color: #F4CE14;
+}
+
+h2.subhead {
+  font-family: "markazi text";
+  font-size: 40pt;
+  color: white;
+}
+
+article {
+  font-family: sans-serif;
+  font-size: 16pt;
+  color: white;
+}
+
+/* Button styling */
+button {
+  background-color: #F4CE14;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  font-weight: bold;
+  margin: 1rem;
+}
+
+button:hover {
+  background-color: #a69025;
+  cursor: pointer;
+}
+
+/* Nav bar styling */
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+nav ul {
   display: flex;
   gap: 1em;
   list-style: none;
 }
 
-.header {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(150px,auto));
-  grid-template-rows: repeat(6, auto);
-  gap: 2em 2em;
+nav a {
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
 }
 
-.banner {
-  grid-area: 2 / 2 / 5 / 3;
-  margin-right: 5em;
-}
-
-button {
-  background-color: #F4CE14;
-  border: none;
-  margin-top: 2em;
-  padding: 10px 20px;
+nav li {
+  padding: 1rem;
   border-radius: 15px;
+  font-family: sans-serif;
+  font-size: 16pt;
   font-weight: bold;
+  color: black;
+}
+
+nav li.active {
+  background-color: #EDEFEE;
+  color: #333333;
+}
+
+nav li:hover {
+  background-color: #333333;
+  color: #EDEFEE;
+}
+
+/* Hero styling */
+.hero-background {
+  background: #495e57;
+  display: flex;
+  height: 400px;
+  margin-bottom: 7rem;
+}
+
+.hero {
+  padding: 2rem;
+  display: grid;
+  align-items: start;
+  justify-items: space-around;
+  grid-column-gap: 10rem;
+  grid-template-columns: 60fr 40fr;
+  max-width: 65rem;
+  margin: 0 auto;
+}
+
+.headline {
+ margin: 1rem 1rem 0;
+}
+
+.subhead {
+  margin: 0 1rem 1rem;
+}
+
+.headertext {
+  margin: 1rem 8rem 1rem 1rem;
 }
 
 .crop {
-  grid-area: 2 / 3 / 7 / 4;
-  height: 330px;
+  height: 400px;
+  margin: 1rem;
   overflow: hidden;
   border-radius: 5%;
 }
 
-.bannerBackground {
-  background-color: #495E57;
-  grid-area: 1 / 1 / 6 / 5;
+/* Promotion styling */
+.promotion {
+  padding: 2.5rem 0;
+  max-width: 65rem;
+  margin: 0 auto;
 }
 
-.promotion {
+.headerContainer {
   display: grid;
-  grid-template-columns: repeat(2, auto);
-  margin-left: 13em;
-  margin-right: 13em;
-  row-gap: 30px;
+  align-items: center;
+  grid-column-gap: 2rem;
+  grid-template: "info image";
+  grid-template-columns: 85fr 15fr;
+  margin-bottom: 2rem;
 }
 
 .menu {
-  justify-self: right;
-  width: 150px
+  width: 150px;
+  height: 3rem;
 }
 
-.dishCard {
-  grid-column: span 2;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(220px, 220px));
-  column-gap: 50px;
-  justify-self: center;
+.cardContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Reservation styling */
+.reservation {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  font-size: 16pt;
+  padding-bottom: 4rem;
+  background-color: #EDEFEE;
+}
+
+form {
+  background-color: #FBDAB6;
+  padding: 6rem 16rem;
+  border-radius: 15px;
+}
+
+input,
+select {
+  height: 2.5rem;
+  padding-inline-end: 1rem;
+  padding-inline-start: 1rem;
+  outline: none;
+  border: 0.0625rem solid #e0e0e0;
+  border-radius: 0.375rem;
+  background: #ffffff;
+  color: #495e57;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus {
+  border-width: 0.125rem;
+  border-color: #495e57;
+}
+
+/* Confirmation page */
+.confirmation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  margin: 15rem;
 }

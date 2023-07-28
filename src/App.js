@@ -1,10 +1,10 @@
 import './App.css';
-import Nav from './components/Nav';
+import Nav from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
 import ReserveTable from './components/ReserveTable';
 import ConfirmedBooking from './components/ConfirmedBooking';
-import Footer from './components/Footer';
+import Footer from './components/Footbar'
 import { Route, Routes } from 'react-router-dom';
 
 function App() {
